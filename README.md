@@ -2,6 +2,8 @@
 
 JSON creation, validation, fix and documentation according schema.
 
+If only validation is important to you, we suggest [ajv](https://github.com/epoberezkin/ajv).
+
 **Table of Contents**
 - [Installation](#installation)
 - [Schema Definition](#schema-definition)
