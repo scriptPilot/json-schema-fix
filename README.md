@@ -22,16 +22,16 @@ const schema = {
   properties: {
     name: {
       type: 'string',
-      default: 'Name'
+      default: 'Name',
     },
     age: {
       type: 'number',
-      default: '123'
-    }
-  }
+      default: '123',
+    },
+  },
 };
 
-const data = json.create(schema)
+const data = json.create(schema);
 ```
 
 data:
