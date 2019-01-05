@@ -1,27 +1,30 @@
 const docu = require('../src/docu');
 
-const tableHeader = '| Property | Type | Default Value |\n|:--- |:--- |:--- |\n';
+const tableHeader = '| Property | Type | Default Value | Description |\n|:--- |:--- |:--- |:--- |\n';
 
 const schema1 = {
   type: 'string',
-  default: 'Text',
 };
-const markdown1 = `${tableHeader}| root | *string* | \`Text\` |`;
+const markdown1 = `${tableHeader}| root | *string* | | |`;
 
 const schema2 = {
   type: 'object',
   properties: {
     name: {
       type: 'string',
-      default: 'Name',
+      default: 'Mr Nice Guy',
+      description: 'Name of the person.',
     },
     age: {
       type: 'number',
-      default: '123',
+      default: '30',
+      description: 'Age of the person.',
     },
   },
 };
-const markdown2 = `${tableHeader}| root | *object* | |\n| root.name | *string* | \`Name\` |\n| root.age | *number* | \`123\` |`;
+const markdown2 = `${tableHeader}| root | *object* | | |\n`
+  + '| root.name | *string* | `Mr Nice Guy` | Name of the person. |\n'
+  + '| root.age | *number* | `30` | Age of the person. |';
 
 test('should export function', () => {
   expect(typeof docu).toBe('function');

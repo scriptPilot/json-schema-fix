@@ -21,7 +21,7 @@ If only validation is important to you, we suggest [ajv](https://github.com/epob
 
 The schema has to be defined according https://json-schema.org/.
 
-Accepted/used properties are `type`, `properties` and `default`.
+Accepted/used properties are `type`, `properties`, `default` and `description`.
 
 ## Usage
 
@@ -184,17 +184,17 @@ const markdownDocumentation = json.docu(schema);
 markdownDocumentation:
 
 ```
-| Property | Type | Default Value |
-|:--- |:--- |:--- |
-| root | *object* | |
-| root.name | *string* | `Name` |
-| root.age | *number* | `123` |
+| Property | Type | Default Value | Description |
+|:--- |:--- |:--- |:--- |
+| root | *object* | | |
+| root.name | *string* | `Name` | |
+| root.age | *number* | `123` | |
 ```
 
 Rendered:
 
-| Property | Type | Default Value |
-|:--- |:--- |:--- |
-| root | *object* | |
-| root.name | *string* | `Name` |
-| root.age | *number* | `123` |
+| Property | Type | Default Value | Description |
+|:--- |:--- |:--- |:--- |
+| root | *object* | | |
+| root.name | *string* | `Name` | |
+| root.age | *number* | `123` | |
