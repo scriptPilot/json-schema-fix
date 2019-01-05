@@ -34,7 +34,7 @@ const schema = {
 const data = json.create(schema)
 ```
 
-creates data:
+data:
 
 ```
 {
