@@ -2,21 +2,25 @@
 
 JSON creation, validation, fix and documentation according schema.
 
+**Table of Contents**
+- [Installation](#schema-definition)
+- [Schema Definition](#schema-definition)
+- Usage
+  - [Create JSON from schema](#create-json-from-schema)
+  - [Validate JSON according schema](#validate-json-according-schema)
+  - [Fix JSON according schema](#fix-json-according-schema)
+
 ## Installation
 
 `npm install --save json-schema-fix`
 
-## Schema
+## Schema Definition
 
-The schema has to be created according https://json-schema.org/.
+The schema has to be defined according https://json-schema.org/.
 
 Accepted/used properties are `type`, `properties` and `default`.
 
 ## Usage
-
-- [Create JSON from schema](#create-json-from-schema)
-- [Validate JSON according schema](#validate-json-according-schema)
-- [Fix JSON according schema](#fix-json-according-schema)
 
 ### Create JSON from schema
 
