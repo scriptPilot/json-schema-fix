@@ -3,7 +3,7 @@
 JSON creation, validation, fix and documentation according schema.
 
 **Table of Contents**
-- [Installation](#schema-definition)
+- [Installation](#installation)
 - [Schema Definition](#schema-definition)
 - Usage
   - [Create JSON from schema](#create-json-from-schema)
