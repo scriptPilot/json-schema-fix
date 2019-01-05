@@ -1,6 +1,6 @@
 const docu = require('../src/docu');
 
-const tableHeader = '| Property | Type | Default Value |\n| --- | --- | --- |\n';
+const tableHeader = '| Property | Type | Default Value |\n|:--- |:--- |:--- |\n';
 
 const schema1 = {
   type: 'string',
