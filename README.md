@@ -170,10 +170,12 @@ const schema = {
     name: {
       type: 'string',
       default: 'Name',
+      description: 'Name of the person.'
     },
     age: {
       type: 'number',
       default: '123',
+      description: 'Age of the person.'
     },
   },
 };
@@ -187,8 +189,8 @@ markdownDocumentation:
 | Property | Type | Default Value | Description |
 |:--- |:--- |:--- |:--- |
 | root | *object* | | |
-| root.name | *string* | `Name` | |
-| root.age | *number* | `123` | |
+| root.name | *string* | `Name` | Name of the person. |
+| root.age | *number* | `123` | Age of the person. |
 ```
 
 Rendered:
@@ -196,5 +198,5 @@ Rendered:
 | Property | Type | Default Value | Description |
 |:--- |:--- |:--- |:--- |
 | root | *object* | | |
-| root.name | *string* | `Name` | |
-| root.age | *number* | `123` | |
+| root.name | *string* | `Name` | Name of the person. |
+| root.age | *number* | `123` | Age of the person. |
