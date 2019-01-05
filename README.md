@@ -46,6 +46,8 @@ data:
 ## Validate JSON according schema
 
 ```
+const json = require('json-schema-fix');
+
 const schema = {
   type: 'object',
   properties: {
