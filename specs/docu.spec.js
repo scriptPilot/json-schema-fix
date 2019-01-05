@@ -21,7 +21,7 @@ const schema2 = {
     },
   },
 };
-const markdown2 = `${tableHeader}| root | *object* | \`\` |\n| root.name | *string* | \`Name\` |\n| root.age | *number* | \`123\` |`;
+const markdown2 = `${tableHeader}| root | *object* | |\n| root.name | *string* | \`Name\` |\n| root.age | *number* | \`123\` |`;
 
 test('should export function', () => {
   expect(typeof docu).toBe('function');

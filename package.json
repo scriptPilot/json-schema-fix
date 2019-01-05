@@ -1,6 +1,6 @@
 {
   "name": "json-schema-fix",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "JSON creation, validation, fix and documentation according schema.",
   "main": "./src/index.js",
   "scripts": {

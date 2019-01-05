@@ -184,7 +184,7 @@ markdownDocumentation:
 ```
 | Property | Type | Default Value |
 |:--- |:--- |:--- |
-| root | *object* | `` |
+| root | *object* | |
 | root.name | *string* | `Name` |
 | root.age | *number* | `123` |
 ```
@@ -193,6 +193,6 @@ Rendered:
 
 | Property | Type | Default Value |
 |:--- |:--- |:--- |
-| root | *object* | `` |
+| root | *object* | |
 | root.name | *string* | `Name` |
 | root.age | *number* | `123` |
