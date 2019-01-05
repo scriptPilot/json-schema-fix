@@ -12,7 +12,13 @@ The schema has to be created according https://json-schema.org/.
 
 Accepted/used properties are `type`, `properties` and `default`.
 
-## Create JSON from schema
+## Usage
+
+- [Create JSON from schema](#create-json-from-schema)
+- [Validate JSON according schema](#validate-json-according-schema)
+- [Fix JSON according schema](#fix-json-according-schema)
+
+### Create JSON from schema
 
 ```
 const json = require('json-schema-fix');
@@ -43,7 +49,7 @@ data:
 }
 ```
 
-## Validate JSON according schema
+### Validate JSON according schema
 
 ```
 const json = require('json-schema-fix');
@@ -95,7 +101,7 @@ isNotValid2:
 ]
 ```
 
-## Fix JSON according schema
+### Fix JSON according schema
 
 ```
 const json = require('json-schema-fix');
