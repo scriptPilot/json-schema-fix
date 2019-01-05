@@ -1,0 +1,22 @@
+{
+  "name": "json-schema-fix",
+  "version": "1.0.0-beta.1",
+  "description": "JSON creation, validation, fix and documentation according schema.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scriptPilot/json-schema-fix.git"
+  },
+  "author": "Dennis Scheffel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scriptPilot/json-schema-fix/issues"
+  },
+  "homepage": "https://github.com/scriptPilot/json-schema-fix#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
