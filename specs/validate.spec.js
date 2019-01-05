@@ -17,30 +17,25 @@ test('should validate type "object" correctly', () => {
   expect(Array.isArray(validate({ type: 'object' }, ''))).toBe(true);
 });
 test('should validate nested object correctly', () => {
-  const nestedObject = {
+  const schema = {
     type: 'object',
     properties: {
-      object: {
-        type: 'object',
-        properties: {
-          string: {
-            type: 'string',
-          },
-          number: {
-            type: 'number',
-          },
-        },
+      string: {
+        type: 'string',
+      },
+      number: {
+        type: 'number',
       },
     },
   };
   const invalidData1 = { string: '', number: null };
   const invalidData2 = { string: null, number: 123 };
   const invalidData3 = { string: null, number: null };
-  expect(validate(nestedObject, { string: '', number: 123 })).toBe(null);
-  expect(Array.isArray(validate(nestedObject, {}))).toBe(true);
-  expect(Array.isArray(validate(nestedObject, invalidData1))).toBe(true);
-  expect(Array.isArray(validate(nestedObject, invalidData2))).toBe(true);
-  expect(Array.isArray(validate(nestedObject, invalidData3))).toBe(true);
+  expect(validate(schema, { string: '', number: 123 })).toBe(null);
+  expect(Array.isArray(validate(schema, {}))).toBe(true);
+  expect(Array.isArray(validate(schema, invalidData1))).toBe(true);
+  expect(Array.isArray(validate(schema, invalidData2))).toBe(true);
+  expect(Array.isArray(validate(schema, invalidData3))).toBe(true);
 });
 test('should validate type "array" correctly', () => {
   expect(validate({ type: 'array' }, [])).toBe(null);
