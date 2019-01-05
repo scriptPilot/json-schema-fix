@@ -14,8 +14,10 @@ const schema = {
   },
 };
 
-const validYes = json.validate(schema, { name: 'Mr Nice Guy', age: 30 });
-const validNo = json.validate(schema, { name: 'Mr Nice Guy', age: 'asdas' });
+const isValid = json.validate(schema, { name: 'Mr Nice Guy', age: 30 });
+const isNotValid1 = json.validate(schema, 'any wrong data');
+const isNotValid2 = json.validate(schema, { name: null, age: 'any wrong data' });
 
-console.log(validYes); // eslint-disable-line no-console
-console.log(validNo); // eslint-disable-line no-console
+console.log(isValid); // eslint-disable-line no-console
+console.log(isNotValid1); // eslint-disable-line no-console
+console.log(isNotValid2); // eslint-disable-line no-console

@@ -42,3 +42,57 @@ data:
   age: 123
 }
 ```
+
+## Validate JSON according schema
+
+```
+const schema = {
+  type: 'object',
+  properties: {
+    name: {
+      type: 'string',
+      default: 'Name',
+    },
+    age: {
+      type: 'number',
+      default: '123',
+    },
+  },
+};
+
+const isValid = json.validate(schema, { name: 'Mr Nice Guy', age: 30 });
+const isNotValid1 = json.validate(schema, 'any wrong data');
+const isNotValid2 = json.validate(schema, { name: null, age: 'any wrong data' });
+```
+
+isValid:
+
+```
+null
+```
+
+isNotValid1:
+
+```
+[
+  {
+    error: 'Should be an "object".',
+    path: 'root'
+  }
+]
+```
+
+isNotValid2:
+
+```
+[
+  {
+    error: 'Should be a "string".',
+    path: 'root.name'
+  },
+  {
+    error: 'Should be a "number".',
+    path: 'root.age'
+  }
+]
+```

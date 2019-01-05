@@ -6,10 +6,12 @@ const validate = (schema, data, path = ['root']) => {
   } if (schema.type === 'object') {
     if (schema.properties === undefined) {
       return typeof data === 'object' && data !== null ? null : [{ error: 'Should be an "object".', path: path.join('.') }];
+    } else if (typeof data !== 'object' || data === null) {
+      return [{ error: 'Should be an "object".', path: path.join('.') }];
     }
     let propsValidationErrors = [];
     Object.keys(schema.properties).forEach((key) => {
-      const propValidation = validate(schema.properties[key], data ? data[key] : undefined, path);
+      const propValidation = validate(schema.properties[key], data ? data[key] : undefined, [...path, key]);
       if (Array.isArray(propValidation)) {
         propsValidationErrors = propsValidationErrors.concat(propValidation);
       }
