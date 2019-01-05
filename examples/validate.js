@@ -16,7 +16,7 @@ const schema = {
 
 const isValid = json.validate(schema, { name: 'Mr Nice Guy', age: 30 });
 const isNotValid1 = json.validate(schema, 'any wrong data');
-const isNotValid2 = json.validate(schema, { name: null, age: 'any wrong data' });
+const isNotValid2 = json.validate(schema, { name: 'Mr Nice Guy', age: 'any wrong data' });
 
 console.log(isValid); // eslint-disable-line no-console
 console.log(isNotValid1); // eslint-disable-line no-console

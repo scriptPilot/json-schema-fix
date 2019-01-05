@@ -64,7 +64,7 @@ const schema = {
 
 const isValid = json.validate(schema, { name: 'Mr Nice Guy', age: 30 });
 const isNotValid1 = json.validate(schema, 'any wrong data');
-const isNotValid2 = json.validate(schema, { name: null, age: 'any wrong data' });
+const isNotValid2 = json.validate(schema, { name: 'Mr Nice Guy', age: 'any wrong data' });
 ```
 
 isValid:
@@ -88,10 +88,6 @@ isNotValid2:
 
 ```
 [
-  {
-    error: 'Should be a "string".',
-    path: 'root.name'
-  },
   {
     error: 'Should be a "number".',
     path: 'root.age'
