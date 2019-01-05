@@ -4,7 +4,7 @@
   "description": "JSON creation, validation, fix and documentation according schema.",
   "main": "index.js",
   "scripts": {
-    "test": "jest spec.js"
+    "test": "npx eslint --fix . && npx jest"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/scriptPilot/json-schema-fix#readme",
   "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.2",
     "jest": "^23.6.0"
   }
 }
