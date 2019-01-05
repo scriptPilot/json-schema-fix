@@ -94,3 +94,54 @@ isNotValid2:
   }
 ]
 ```
+
+## Fix JSON according schema
+
+```
+const json = require('json-schema-fix');
+
+const schema = {
+  type: 'object',
+  properties: {
+    name: {
+      type: 'string',
+      default: 'Name',
+    },
+    age: {
+      type: 'number',
+      default: '123',
+    },
+  },
+};
+
+const fixedData1 = json.fix(schema, undefined);
+const fixedData2 = json.fix(schema, { name: 'Mr Nice Guy' });
+const fixedData3 = json.fix(schema, { unrelevant: undefined });
+```
+
+fixedData1:
+
+```
+{
+  name: 'Name',
+  age: '123'
+}
+```
+
+fixedData2:
+
+```
+{
+  name: 'Mr Nice Guy',
+  age: '123'
+}
+```
+
+fixedData3:
+
+```
+{
+  name: 'Name',
+  age: '123'
+}
+```
