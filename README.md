@@ -9,6 +9,7 @@ JSON creation, validation, fix and documentation according schema.
   - [Create JSON from schema](#create-json-from-schema)
   - [Validate JSON according schema](#validate-json-according-schema)
   - [Fix JSON according schema](#fix-json-according-schema)
+  - [Create Markdown documentation from schema](#create-markdown-documentation-from-schema)
 
 ## Installation
 
@@ -155,3 +156,43 @@ fixedData3:
   age: '123'
 }
 ```
+
+### Create Markdown documentation from schema
+
+```
+const json = require('json-schema-fix');
+
+const schema = {
+  type: 'object',
+  properties: {
+    name: {
+      type: 'string',
+      default: 'Name',
+    },
+    age: {
+      type: 'number',
+      default: '123',
+    },
+  },
+};
+
+const markdownDocumentation = json.docu(schema);
+```
+
+markdownDocumentation:
+
+```
+| Property | Type | Default Value |
+| --- | --- | --- |
+| root | *object* | `` |
+| root.name | *string* | `Name` |
+| root.age | *number* | `123` |
+```
+
+Rendered:
+
+| Property | Type | Default Value |
+| --- | --- | --- |
+| root | *object* | `` |
+| root.name | *string* | `Name` |
+| root.age | *number* | `123` |
