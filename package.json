@@ -1,6 +1,6 @@
 {
   "name": "json-schema-fix",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "JSON creation, validation, fix and documentation according schema.",
   "main": "./src/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/scriptPilot/json-schema-fix.git"
   },
-  "author": "Dennis Scheffel",
+  "author": "scriptPilot <mail@scriptPilot.de> (https://github.com/scriptPilot)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/scriptPilot/json-schema-fix/issues"
