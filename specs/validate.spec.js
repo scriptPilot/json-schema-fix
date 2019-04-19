@@ -6,6 +6,8 @@ test('should export function', () => {
 test('should validate type "string" correctly', () => {
   expect(validate({ type: 'string' }, '')).toBe(null);
   expect(Array.isArray(validate({ type: 'string' }, 123))).toBe(true);
+  expect(validate({ type: 'string', pattern: 'yes' }, 'yes')).toBe(null);
+  expect(Array.isArray(validate({ type: 'string', pattern: 'yes' }, 'no'))).toBe(true);
 });
 test('should validate type "number" correctly', () => {
   expect(validate({ type: 'number' }, 123)).toBe(null);

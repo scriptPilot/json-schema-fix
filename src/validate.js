@@ -1,5 +1,8 @@
 const validate = (schema, data, path = ['root']) => {
   if (schema.type === 'string') {
+    if (typeof schema.pattern === 'string' && new RegExp(schema.pattern).test(data) !== true) {
+      return [{ error: `Should match the pattern "${schema.pattern}".`, path: path.join('.') }];
+    }
     return typeof data === 'string' ? null : [{ error: 'Should be a "string".', path: path.join('.') }];
   } if (schema.type === 'number') {
     return typeof data === 'number' ? null : [{ error: 'Should be a "number".', path: path.join('.') }];

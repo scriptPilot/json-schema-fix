@@ -6,12 +6,12 @@ const schema = {
     name: {
       type: 'string',
       default: 'Name',
-      description: 'Name of the person.'
+      description: 'Name of the person.',
     },
     age: {
       type: 'number',
       default: '123',
-      description: 'Age of the person.'
+      description: 'Age of the person.',
     },
   },
 };
