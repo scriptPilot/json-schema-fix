@@ -15,7 +15,9 @@ If only validation is important to you, we suggest [ajv](https://github.com/epob
 
 ## Installation
 
-`npm install --save json-schema-fix`
+```
+npm install --save json-schema-fix
+```
 
 ## Schema Definition
 
